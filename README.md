@@ -171,6 +171,7 @@ When the breakpoint is reached the column will be hidden. These are the built-in
 | Property | Type | Required | Default | Description |
 |--------------------------|---------------------|----------|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | selectableRows | bool | no | false | Whether to show selectable checkboxes |
+| selectableRowsVisibleOnly | bool | no | false | By default all rows are selectable. With `selectableRowsVisibleOnly` you can opt in to only allow row select and row select all on the visible rows. This is useful when you are using `pagination`. <br /><br />Things to note when using `selectableRowsVisibleOnly`: <br /> 1. If you sort then selected items will be cleared <br />2. When using `sortServer` for server side sorting you do not need to set `selectableRowsVisibleOnly` as the behavior is implicit |
 | selectableRowsHighlight | bool | no | false | Highlight a row when it is selected |
 | selectableRowsNoSelectAll | bool | no | false | Whether to show the select all rows checkbox |
 | clearSelectedRows | bool | no | false | Toggling this property clears the selectedRows. If you use redux or react state you need to make sure that you pass a toggled value or the component will not update. See [Clearing Selected Rows](#clearing-selected-rows)|
